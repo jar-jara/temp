@@ -16,3 +16,4 @@ def kartegame():
         karta3 = Karta(10000, 10, -50)
         ]
         draw_text(screen, f"Возмёшь карточку? {randint[kards(0, 3)]}", 10, 10)
+        ghj
