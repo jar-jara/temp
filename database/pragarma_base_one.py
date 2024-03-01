@@ -2,14 +2,17 @@ import sqlite3
 from PyQt5 import QtWidgets
 import reglog_ui
 
+
 db = sqlite3.connect('database.db')
 cursor = db.cursor()
+
 
 cursor.execute('''CREATE TABLE IF NOT EXISTS users(
     login TEXT,
     password TEXT
 )''')
 db.commit()
+
 
 for i in cursor.execute('SELECT * FROM users'):
     print(i)
@@ -94,6 +97,7 @@ class Login(QtWidgets.QMainWindow, reglog_ui.Ui_MainWindow):
             self.label.setText('Успешная авторизация!')
         else:
             self.label.setText('Ошибка авторизации!')
+
 
 
 App = QtWidgets.QApplication([])
