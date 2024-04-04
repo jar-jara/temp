@@ -14,7 +14,7 @@ pg.display.set_caption("BuSines GAME")
 credits = 0
 reputation = 0
 man = 0
-
+credits = 
 limit = 0
   
 
@@ -159,6 +159,8 @@ while game:
             reputation_text(screen, f"THE END!", 500, 300)
             sleep(1)
             break
+
+
 
         if man >= 20:
             many_man(screen, f"Слишком много рабочих! => {man}", 500, 300)
